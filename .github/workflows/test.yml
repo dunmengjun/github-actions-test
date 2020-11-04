@@ -27,7 +27,7 @@ jobs:
         run: |
           repository="${{github.repository}}"
           arr=(${repository//// })
-          IMAGE_NAME=${arr[1]}
+          set IMAGE_NAME=${arr[1]}
           echo $IMAGE_NAME
       - uses: FranzDiebold/github-env-vars-action@v1.2.1
       - name: Print environment variables
