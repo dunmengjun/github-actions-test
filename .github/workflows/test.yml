@@ -26,6 +26,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           repository="${{github.repository}}"
-          arr=(${${{github.repository}}//// })
+          arr=(${"${{github.repository}}"//// })
           IMAGE_NAME=${arr[1]}
           echo $IMAGE_NAME
